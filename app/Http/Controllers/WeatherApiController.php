@@ -13,7 +13,7 @@ class WeatherApiController extends Controller
     public function getCachedWeather($location)
     {
         // Define the cache key based on the location
-       return $cacheKey = 'weather_' . $location;
+        $cacheKey = 'weather_' . $location;
 
         // Check if the data is already cached, if not cache it and log it
         $weather = Cache::remember($cacheKey, 3600, function () use ($location) {
