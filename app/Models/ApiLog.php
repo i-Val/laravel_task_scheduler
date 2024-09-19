@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class ApiLog extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'location',
+        'response',
+        'cached_at'
+    ];
 }
